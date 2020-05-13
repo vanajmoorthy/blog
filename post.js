@@ -15,12 +15,17 @@ function send() {
 	const url = "https://vanaj-blog-api.glitch.me/";
 
 	const options = {
-		method: "POST",
+		method: "post",
 		headers: {
+			Accept: "application/json, text/plain, */*",
 			"Content-Type": "application/json",
 		},
-		body: data,
+		body: JSON.stringify(data),
 	};
 
-	fetch(url, options).then((data) => console.log(data));
+	// fetch(url, options).then((data) => console.log(data));
+
+	fetch(url, options)
+		.then((res) => res.json())
+		.then((res) => console.log(res));
 }
