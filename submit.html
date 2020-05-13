@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/vwa1ldq.css">
+    <title>Blog | Submit</title>
+</head>
+
+<body>
+    <nav class="container">
+        <ul class="list">
+            <li class="links"><a href="index.html">Posts</a></li>
+            <li class="line">|</li>
+            <li class="links"><a href="submit.html">Submit</a></li>
+        </ul>
+    </nav>
+    <main>
+        <script src="post.js"></script>
+        <form onsubmit="send(); return false" method="POST">
+            <div>
+                <label for="title">Title</label>
+                <input name="title" id="title" required>
+            </div>
+            <div>
+                <label for="description">Post Body</label>
+                <input name="description" id="description" required>
+            </div>
+            <div>
+                <label for="author">Author Name</label>
+                <input name="author" id="author">
+            </div>
+            <div>
+                <button>Submit</button>
+            </div>
+        </form>
+    </main>
+
+</body>
+
+</html>
