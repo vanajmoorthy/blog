@@ -1,0 +1,49 @@
+.container {
+	max-width: 100vw;
+	height: 10vh;
+	margin: 0 10rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.2s ease;
+}
+
+.list {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	cursor: default;
+	text-align: center;
+}
+
+.links,
+.line {
+	padding: 0;
+	margin: 0;
+	display: inline-block;
+	margin: 0 15px 0 15px;
+	color: blue;
+	user-select: none;
+	font-size: 1.3rem;
+	transition: all 0.3s ease-out;
+}
+
+.links {
+	cursor: pointer;
+}
+
+.links:hover {
+	opacity: 0.5;
+}
+
+@media only screen and (max-width: 768px) {
+	.container {
+		margin: 0 2rem;
+	}
+}
+
+@media only screen and (max-width: 295px) {
+	.container {
+		margin: 0 0.5rem;
+	}
+}
