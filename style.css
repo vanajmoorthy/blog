@@ -3,6 +3,10 @@ body {
 	background-color: #f7fafc;
 }
 
+a {
+	text-decoration: none;
+}
+
 .container {
 	font-family: canada-type-gibson, sans-serif;
 	font-weight: 500;
