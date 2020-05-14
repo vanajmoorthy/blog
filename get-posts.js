@@ -2,29 +2,25 @@ const url = "https://vanaj-blog-api.glitch.me/";
 
 fetch(url)
 	.then((response) => response.json())
-	.then((data) => thisIsATemporaryName(data));
+	.then((data) => renderCards(data));
 
-function thisIsATemporaryName(data) {
-	let posts;
+function renderCards(data) {
+	let posts = data.data.reverse();
 
-	posts = data;
-
-	let postData = posts.data.reverse();
-
-	for (let i = 0; i < posts.data.length; i++) {
-		let title = postData[i].title;
-		let id = postData[i].id;
+	for (let i = 0; i < posts.length; i++) {
+		let title = posts[i].title;
+		let id = posts[i].id;
 		let author =
-			postData[i].author == null || postData[i].author == "null"
+			posts[i].author == null || posts[i].author == "null"
 				? "anonymous"
-				: postData[i].author;
-		let description = postData[i].description;
+				: posts[i].author;
+		let description = posts[i].description;
 
 		let post = `<div class="post">
-            <h1 class="title"><span class="id">${id}.</span> ${title}</h1>
-            <p class="author">${author}</p>
-            <p class="description">${description}</p>
-		</div>`;
+            			<h1 class="title"><span class="id">${id}.</span> ${title}</h1>
+            			<p class="author">${author}</p>
+						<p class="description">${description}</p>
+					</div>`;
 
 		document.getElementById("data").innerHTML += post;
 	}
