@@ -27,5 +27,7 @@ function send() {
 
 	fetch(url, options)
 		.then((res) => res.json())
-		.then((res) => console.log(res));
+		.then(() => {
+			alert("success, your post has been submitted");
+		});
 }
